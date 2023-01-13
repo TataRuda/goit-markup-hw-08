@@ -1,0 +1,64 @@
+@media screen and (min-width: 480px) {
+  .catalog {
+    display: none;
+    width: 0;
+  }
+  .unvisible-block {
+    display: none;
+    width: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .unvisible-block {
+    display: flex;
+    width: 100%;
+  }
+  .catalog {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px 0px 0px 0px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    &__title {
+      font-weight: 700;
+      font-size: $mobile-titleFont;
+      line-height: 1.18;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: $text-darkColor;
+      margin: 0px auto;
+      padding: 0;
+    }
+    &__item {
+      position: relative;
+    }
+    &__text {
+      text-align: center;
+      font-size: $primaryFont;
+      font-weight: 700;
+      line-height: 1.14;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: $whiteColor;
+      font-family: $mainFont-family;
+      &--overlay {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        background-color: $bg-catalogColor;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin-top: 224px;
+        padding-top: 27px;
+      }
+    }
+  }
+}

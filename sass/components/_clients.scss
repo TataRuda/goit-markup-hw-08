@@ -1,0 +1,45 @@
+@media screen and (min-width: 480px) {
+  .clients-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    &--indents {
+      margin-top: 30px;
+    }
+  }
+
+  .clients-list__item {
+    text-decoration: none;
+    padding: 15px 51px 15px 51px;
+    outline: none;
+    line-height: 0.7;
+    fill: $iconColor;
+    border: 1px solid $iconColor;
+    border-radius: 4px;
+    transition: border-color $baseAnimation, fill $baseAnimation;
+    &:hover,
+    &:focus {
+      fill: $primaryColor;
+      cursor: pointer;
+      border-color: $primaryColor;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .clients-list__item {
+    padding: 15px 59px 15px 59px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients-list {
+    &--indents {
+      margin-top: 50px;
+    }
+  }
+  .clients-list__item {
+    padding: 15px 31px 15px 31px;
+  }
+}

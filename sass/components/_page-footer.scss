@@ -1,0 +1,216 @@
+@media screen and (min-width: 480px) {
+  .footer-container {
+    background-color: $bgdarkColor;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .footer-row {
+    display: flex;
+    flex-direction: column;
+    &__column {
+      display: block;
+      text-align: center;
+      &--indent_left {
+        margin-top: 20px;
+      }
+
+      & h5 {
+        font-weight: 700;
+        font-size: $primaryFont;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $whiteColor;
+        margin-bottom: 20px;
+      }
+      &--end {
+        margin-top: 60px;
+      }
+    }
+  }
+  .contacts-footer {
+    display: block;
+    list-style: none;
+    &--indent-top {
+      padding-left: 0px;
+      margin: 0px;
+      padding-top: 20px;
+    }
+    &__address {
+      font-style: normal;
+      font-size: $primaryFont;
+      line-height: 1.71;
+      letter-spacing: 0.03em;
+      color: $whiteColor;
+    }
+    &__item:not(:last-child) {
+      padding-bottom: 8px;
+    }
+    &__link {
+      font-weight: 400;
+      font-size: $primaryFont;
+      line-height: 1.71;
+      letter-spacing: 0.03em;
+      color: $text-contactsColor;
+      text-decoration: none;
+      outline: none;
+      transition: color $baseAnimation;
+      &--underline {
+        text-decoration-line: underline;
+      }
+      &:hover,
+      &:focus {
+        color: $primaryColor;
+      }
+    }
+  }
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    &__title {
+      font-weight: 700;
+      font-size: $primaryFont;
+      line-height: 1.14;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: $whiteColor;
+      text-align: center;
+    }
+    &__input {
+      display: inline;
+      padding: 14px 15px;
+      border-radius: 4px;
+      border: 1px solid $borderColor;
+      background-color: $bgdarkColor;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: $secondaryFont;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+      text-align: left;
+      outline: 0;
+      color: $whiteColor;
+      &::placeholder {
+        color: $whiteColor;
+        opacity: 0.6;
+      }
+      &:not(:placeholder-shown) {
+        border-color: $primaryColor;
+      }
+      &:focus-within {
+        border-color: $primaryColor;
+      }
+    }
+  }
+}
+/* tablet*/
+@media screen and (min-width: 768px) {
+  .footer-row {
+    display: inline;
+    &__column {
+      display: block;
+      text-align: center;
+      &--indent_left {
+        width: 206px;
+        margin-top: 0px;
+        margin-left: 144px;
+      }
+      &--end {
+        display: block;
+        margin-top: 60px;
+      }
+    }
+  }
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      font-weight: 700;
+      font-size: $primaryFont;
+      line-height: 1.14;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: $whiteColor;
+      text-align: center;
+    }
+    &__input {
+      display: inline;
+      padding: 14px 15px;
+      border-radius: 4px;
+      border: 1px solid $borderColor;
+      background-color: $bgdarkColor;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      text-align: center;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .footer-row {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      &__column {
+        display: block;
+        text-align: left;
+        &--indent_left {
+          margin-left: 70px;
+          margin-top: 0px;
+          margin-left: 78px;
+        }
+
+        & h5 {
+          font-weight: 700;
+          font-size: $primaryFont;
+          line-height: 1.14;
+          letter-spacing: 0.03em;
+          text-transform: uppercase;
+          color: $whiteColor;
+          margin-top: 11px;
+          margin-bottom: 20px;
+        }
+        &--end {
+          padding-top: 11px;
+          margin-top: 0;
+        }
+      }
+    }
+
+    .contacts-footer {
+      list-style: none;
+      &--indent-top {
+        padding-left: 0px;
+        margin: 0px;
+        padding-top: 20px;
+      }
+      &__address {
+        font-style: normal;
+        font-size: $primaryFont;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: $whiteColor;
+      }
+      &__item:not(:last-child) {
+        padding-bottom: 9px;
+      }
+    }
+
+    .newsletter-form {
+      flex-direction: row;
+      align-items: flex-end;
+      &__title {
+        text-align: left;
+      }
+      &__input {
+        margin-top: 20px;
+        margin-bottom: 0px;
+        text-align: left;
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@media screen and (min-width: 1200px) {
+  .projects-grid {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    &--indent-top {
+      margin: 50px 0px 0px 0px;
+      padding: 0;
+    }
+  }
+  .card-portfolio {
+    position: relative;
+    box-sizing: content-box;
+    background: $whiteColor;
+    margin: 0;
+    padding: 0;
+    border: 0px;
+    transition: box-shadow $baseAnimation;
+    &:hover {
+      box-shadow: $portfolio-cardShadow;
+      cursor: pointer;
+    }
+    &:hover .card-portfolio__overlay {
+      z-index: 1;
+      height: 73%;
+    }
+    &__overlay {
+      background-color: $primaryColor;
+      opacity: 0.9;
+      width: 100%;
+      height: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 27%;
+      overflow: hidden;
+      transition: $baseAnimation;
+    }
+    &__text-overlay {
+      font-size: $namesFont;
+      line-height: 1.55;
+      letter-spacing: 0.03em;
+      color: $whiteColor;
+      position: absolute;
+      padding: 49px 45px 49px 24px;
+      margin: 0;
+    }
+    &__figcaption {
+      font-weight: 400;
+      font-size: $secondaryFont;
+      line-height: 1.88;
+      letter-spacing: 0.03em;
+      text-align: left;
+      padding: 20px 24px;
+      border-left: 1px solid $border-cardColor;
+      border-right: 1px solid $border-cardColor;
+      border-bottom: 1px solid $border-cardColor;
+      & p {
+        margin: 0;
+        padding-top: 3px;
+      }
+    }
+    &__title {
+      font-weight: 700;
+      font-size: $namesFont;
+      line-height: 2;
+      letter-spacing: 0.06em;
+      color: $text-darkColor;
+    }
+  }
+}

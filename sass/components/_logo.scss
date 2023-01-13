@@ -1,0 +1,16 @@
+.logo {
+  color: $primaryColor;
+  font-family: $logoFont-family;
+  font-weight: 700;
+  font-size: $logoFont;
+  line-height: 1.19;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  margin: 0px;
+  &--dark {
+    color: $blackColor;
+  }
+  &--white {
+    color: $whiteColor;
+  }
+}

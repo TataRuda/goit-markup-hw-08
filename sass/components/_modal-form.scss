@@ -1,0 +1,232 @@
+.container-contact-form {
+  display: flex;
+  padding: 32px 32px 40px 40px;
+  transition: transform $modal-windowAnimation;
+}
+.contact-form__title {
+  font-weight: 700;
+  font-size: $form-titleFont;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: $text-darkColor;
+  margin: 0;
+  padding: 0;
+}
+.contact-form__box {
+  position: relative;
+  padding-top: 10px;
+  width: 100%;
+  font-size: $form-textFont;
+  line-height: 1.17;
+  text-align: left;
+  color: $secondaryColor;
+}
+.contact-form__input {
+  display: block;
+  width: 100%;
+  padding-top: 12px;
+  padding-left: 42px;
+  padding-bottom: 12px;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid $border-inputColor;
+  outline: none;
+  color: $text-darkColor;
+  transition: border-color $baseAnimation;
+  &:is(:hover, :focus) {
+    border-color: $primaryColor;
+  }
+  &:is(:hover, :focus) + svg {
+    fill: $primaryColor;
+  }
+}
+.contact-form__icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+  fill: $text-darkColor;
+  transition: fill $baseAnimation;
+}
+
+.contact-form__comment {
+  display: block;
+  width: 100%;
+  padding-top: 12px;
+  padding-left: 16px;
+  padding-bottom: 12px;
+  border-radius: 4px;
+  border: 1px solid $border-inputColor;
+  margin-top: 4px;
+  resize: none;
+  color: $text-darkColor;
+  transition: border-color $baseAnimation;
+  outline: none;
+  &::placeholder {
+    color: $secondaryColor;
+    opacity: 0.5;
+  }
+  &:hover,
+  &:focus {
+    border-color: $primaryColor;
+  }
+}
+
+.contact-form__regulation {
+  display: block;
+  margin: 0;
+  color: $secondaryColor;
+  font-size: $primaryFont;
+  line-height: 1.71;
+  text-align: center;
+  position: relative;
+}
+.checkbox--off {
+  display: none;
+  position: absolute;
+  top: 3px;
+  left: 14px;
+  padding: 0;
+  & + .checkbox__icon-border > .checkbox__icon {
+    position: absolute;
+    top: 3px;
+    left: 14px;
+    padding: 0;
+    width: 16px;
+    height: 15px;
+    appearance: none;
+    cursor: pointer;
+    display: block;
+    border: 2px solid $text-darkColor;
+    border-radius: 2px;
+    fill-opacity: 0;
+    transition: fill-opacity $baseAnimation, border $baseAnimation;
+  }
+  &:checked + .checkbox__icon-border > .checkbox__icon {
+    display: block;
+    border: none;
+    fill-opacity: 1;
+    border-radius: 2px;
+  }
+}
+.checkbox__link {
+  color: $primaryColor;
+}
+
+@media screen and (min-width: 1200px) {
+  .container-contact-form {
+    display: block;
+    padding: 32px 32px 40px 40px;
+    transition: transform $modal-windowAnimation;
+  }
+
+  .contact-form__title {
+    font-weight: 700;
+    font-size: $form-titleFont;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: $text-darkColor;
+    margin: 0;
+    padding: 0;
+  }
+  .contact-form__box {
+    position: relative;
+    padding-top: 10px;
+    width: 100%;
+    font-size: $form-textFont;
+    line-height: 1.17;
+    text-align: left;
+    color: $secondaryColor;
+  }
+  .contact-form__input {
+    display: block;
+    width: 100%;
+    padding-top: 12px;
+    padding-left: 42px;
+    padding-bottom: 12px;
+    margin-top: 4px;
+    border-radius: 4px;
+    border: 1px solid $border-inputColor;
+    outline: none;
+    color: $text-darkColor;
+    transition: border-color $baseAnimation;
+    &:is(:hover, :focus) {
+      border-color: $primaryColor;
+    }
+    &:is(:hover, :focus) + svg {
+      fill: $primaryColor;
+    }
+  }
+  .contact-form__icon {
+    position: absolute;
+    bottom: 11px;
+    left: 12px;
+    fill: $text-darkColor;
+    transition: fill $baseAnimation;
+  }
+
+  .contact-form__comment {
+    display: block;
+    width: 100%;
+    padding-top: 12px;
+    padding-left: 16px;
+    padding-bottom: 12px;
+    border-radius: 4px;
+    border: 1px solid $border-inputColor;
+    margin-top: 4px;
+    resize: none;
+    color: $text-darkColor;
+    transition: border-color $baseAnimation;
+    outline: none;
+    &::placeholder {
+      color: $secondaryColor;
+      opacity: 0.5;
+    }
+    &:hover,
+    &:focus {
+      border-color: $primaryColor;
+    }
+  }
+
+  .contact-form__regulation {
+    display: block;
+    margin: 20px auto;
+    color: $secondaryColor;
+    font-size: $primaryFont;
+    line-height: 1.71;
+    text-align: center;
+    position: relative;
+  }
+  .checkbox--off {
+    display: none;
+    position: absolute;
+    top: 3px;
+    left: 14px;
+    padding: 0;
+    & + .checkbox__icon-border > .checkbox__icon {
+      position: absolute;
+      top: 3px;
+      left: 14px;
+      padding: 0;
+      width: 16px;
+      height: 15px;
+      appearance: none;
+      cursor: pointer;
+      display: block;
+      border: 2px solid $text-darkColor;
+      border-radius: 2px;
+      fill-opacity: 0;
+      transition: fill-opacity $baseAnimation, border $baseAnimation;
+    }
+    &:checked + .checkbox__icon-border > .checkbox__icon {
+      display: block;
+      border: none;
+      fill-opacity: 1;
+      border-radius: 2px;
+    }
+  }
+  .checkbox__link {
+    color: $primaryColor;
+  }
+}

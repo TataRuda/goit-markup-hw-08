@@ -1,0 +1,112 @@
+.button {
+  font-weight: 500;
+  font-size: $secondaryFont;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  &--white {
+    background-color: $bg-lightColor;
+    color: $text-darkColor;
+    padding: 6px 22px 6px 22px;
+    transition: background-color $baseAnimation, color $baseAnimation,
+      box-shadow $baseAnimation;
+    &:active,
+    &:hover,
+    &:focus {
+      background-color: $primaryColor;
+      box-shadow: $buttonsShadow;
+      color: $whiteColor;
+    }
+  }
+  &-form {
+    display: block;
+    border: none;
+    border-radius: 4px;
+    position: relative;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    &--newsletter {
+      padding: 10px 28px 10px 42px;
+      background-color: $primaryColor;
+      margin: 0px 0px 0px 12px;
+      text-align: left;
+    }
+    &--offer {
+      background-color: $primaryColor;
+      box-shadow: $button-formShadow;
+      margin-top: 30px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px 41px 10px 41px;
+    }
+    &--modal {
+      margin: 10px auto;
+      background-color: $primaryColor;
+      text-align: center;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+      transition: box-shadow $baseAnimation;
+    }
+    &__text {
+      margin: 0;
+      padding: 0;
+      color: $whiteColor;
+      font-weight: 700;
+      font-size: $secondaryFont;
+      line-height: 1.88;
+      letter-spacing: 0.06em;
+    }
+    &__icon {
+      position: absolute;
+      top: 50%;
+      left: 74%;
+      transform: translate(-50%, -50%);
+      fill: $whiteColor;
+    }
+  }
+  &-close {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #0000001a;
+    border-radius: 50%;
+    fill: $blackColor;
+    background-color: $whiteColor;
+    transition: fill $baseAnimation;
+    outline: none;
+    &--nonborder {
+      border: none;
+    }
+    &--top-right {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+    }
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      fill: $primaryColor;
+    }
+    &__icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+.buttons-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  &--center {
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+  }
+}

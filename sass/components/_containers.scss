@@ -1,0 +1,52 @@
+body {
+  font-family: $mainFont-family;
+  color: $secondaryColor;
+}
+img {
+  display: block;
+}
+ul {
+  text-decoration: none;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    &__title {
+      font-weight: 700;
+      font-size: $mobile-titleFont;
+      line-height: 1.18;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: $text-darkColor;
+      margin: 0px auto;
+      padding: 0;
+    }
+    &--bg-grey {
+      background-color: $bg-lightColor;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}

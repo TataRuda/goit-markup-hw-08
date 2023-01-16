@@ -1,4 +1,4 @@
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (min-width: 480px) {
   .links-row {
     display: flex;
     gap: 10px;
@@ -13,7 +13,6 @@
         background-color: $bg-iconColor;
         fill: $whiteColor;
         transition: fill $baseAnimation, background-color $baseAnimation;
-
         &:hover,
         &:focus {
           background-color: $primaryColor;
@@ -21,7 +20,6 @@
           cursor: pointer;
         }
       }
-
       &--bg-white {
         background-color: $whiteColor;
         fill: $iconColor;
@@ -39,42 +37,9 @@
 
 @media screen and (min-width: 1200px) {
   .links-row {
-    display: flex;
-    gap: 10px;
-    line-height: 0.7;
     &--in_figcaption {
       padding-right: 32px;
       padding-left: 32px;
-    }
-    &__icon {
-      border-radius: 50%;
-      line-height: 0.7;
-      text-decoration: none;
-      outline: none;
-      &--bg-dark {
-        background-color: $bg-iconColor;
-        fill: $whiteColor;
-        transition: fill $baseAnimation, background-color $baseAnimation;
-
-        &:hover,
-        &:focus {
-          background-color: $primaryColor;
-          fill: $whiteColor;
-          cursor: pointer;
-        }
-      }
-
-      &--bg-white {
-        background-color: $whiteColor;
-        fill: $iconColor;
-        transition: background-color $baseAnimation, fill $baseAnimation;
-        &:hover,
-        &:focus {
-          fill: $whiteColor;
-          background-color: $primaryColor;
-          cursor: pointer;
-        }
-      }
     }
   }
 }

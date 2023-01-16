@@ -3,8 +3,6 @@
     pointer-events: none;
     visibility: hidden;
     opacity: 0;
-    transform: translateX(0);
-    transition: transform $modal-windowAnimation;
   }
   .modal {
     position: fixed;
@@ -15,7 +13,7 @@
     background-color: $backdropColor;
     width: 100vw;
     height: 100vh;
-    transform: translateX(0);
+
     visibility: visible;
     transition: visibility $modal-windowAnimation,
       opacity $modal-windowAnimation;
@@ -25,8 +23,6 @@
       z-index: 2;
       left: 15px;
       top: 93px;
-      transform: translateX(100%);
-      transition: transform $modal-windowAnimation;
       &--size_l {
         width: 450px;
         height: 609px;

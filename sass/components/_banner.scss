@@ -34,23 +34,9 @@
   .banner {
     background-image: linear-gradient($bg-bannerColor, $bg-bannerColor),
       url(../images/imgbackground-768.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
     background-size: 768px 400px;
-    display: block;
     margin: 0 auto;
     padding: 200px 0px 200px 0px;
-    &__title {
-      font-weight: 900;
-      font-size: $bannerFont;
-      line-height: 1.36;
-      text-align: center;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: $whiteColor;
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -65,22 +51,12 @@
   .banner {
     background-image: linear-gradient($bg-bannerColor, $bg-bannerColor),
       url(../images/imgbackground-1600.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
+
     background-size: 1600px auto;
-    display: block;
-    margin: 0 auto;
+
     padding: 200px 0px 200px 0px;
     &__title {
-      font-weight: 900;
       font-size: $bannerFont;
-      line-height: 1.36;
-      text-align: center;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: $whiteColor;
-      margin-top: 0px;
-      margin-bottom: 0px;
     }
   }
   @media (min-device-pixel-ratio: 2),

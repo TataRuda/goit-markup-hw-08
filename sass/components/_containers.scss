@@ -1,14 +1,3 @@
-body {
-  font-family: $mainFont-family;
-  color: $secondaryColor;
-}
-img {
-  display: block;
-}
-ul {
-  list-style: none;
-  text-decoration: none;
-}
 @media screen and (min-width: 480px) {
   .container {
     min-width: 480px;
@@ -37,9 +26,6 @@ ul {
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 @media screen and (min-width: 1200px) {

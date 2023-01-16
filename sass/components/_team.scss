@@ -1,13 +1,13 @@
 @media screen and (min-width: 480px) {
   .team {
-    list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     &--indent-top {
-      padding: 30px 15px 0px 15px;
-      margin: 0;
+      padding-top: 30px;
+      gap: 30px;
     }
     &__figure {
       background: $whiteColor;
@@ -37,46 +37,21 @@
     }
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .team {
-    list-style: none;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    &--indent-top {
-      padding: 50px 0px 0px 0px;
-      margin: 0px;
-      gap: 30px;
-    }
-    &__figure {
-      background: $whiteColor;
-      box-shadow: $main-cardShadow;
-      border-radius: 0px 0px 4px 4px;
-      padding: 0;
-      margin: 0;
-      display: block;
-    }
-    &__figcaption {
-      text-align: center;
-      font-size: $secondaryFont;
-      line-height: 1.19;
-      letter-spacing: 0.03em;
-      display: block;
-      &--indents {
-        padding: 30px 0px 30px 0px;
-      }
 
-      &--text {
-        font-weight: 400;
-        margin-bottom: 16px;
-        margin-top: 10px;
-      }
-    }
-    &__name {
-      font-weight: 500;
-      color: $text-darkColor;
+    &--indent-top {
+      padding-top: 50px;
     }
   }
 }

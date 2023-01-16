@@ -6,11 +6,12 @@ img {
   display: block;
 }
 ul {
+  list-style: none;
   text-decoration: none;
 }
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    min-width: 480px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;

@@ -10,11 +10,11 @@
     position: fixed;
     display: flex;
     z-index: 2;
-    left: 15px;
-    top: 93px;
+    left: 0;
+    top: 0;
     background-color: $backdropColor;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     transform: translate(0, 0);
     visibility: visible;
     transition: visibility $modal-windowAnimation,
@@ -23,13 +23,13 @@
       display: flex;
       position: absolute;
       z-index: 2;
-      left: 50%;
-      top: 50%;
+      left: 15px;
+      top: 93px;
       transform: translate(-50%, -50%);
       transition: transform $modal-windowAnimation;
       &--size_l {
-        width: calc (100% - 30px);
-        height: calc(100% - 180px);
+        width: 450px;
+        height: 609px;
         padding-top: 8px;
         padding-right: 8px;
         background-color: $whiteColor;

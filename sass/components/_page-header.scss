@@ -13,6 +13,7 @@
     border: none;
     fill: $blackColor;
     background-color: $whiteColor;
+    cursor: pointer;
     &:hover,
     &:focus {
       fill: $primaryColor;

@@ -1,44 +1,47 @@
-.is-hidden {
-  pointer-events: none;
-  visibility: hidden;
-  opacity: 0;
-  transform: translate(0, 0);
-  transition: transform $modal-windowAnimation;
-}
-.modal {
-  position: fixed;
-  display: flex;
-  z-index: 2;
-  left: 15px;
-  top: 93px;
-  background-color: $backdropColor;
-  width: 100vw;
-  height: 100vw;
-  transform: translate(0, 0);
-  visibility: visible;
-  transition: visibility $modal-windowAnimation, opacity $modal-windowAnimation;
-  &-box {
-    display: flex;
-    position: absolute;
-    z-index: 2;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+@media screen and (min-width: 480px) {
+  .is-hidden {
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(0, 0);
     transition: transform $modal-windowAnimation;
-    &--size_l {
-      width: calc (100% - 30px);
-      height: calc(100% - 180px);
-      padding-top: 8px;
-      padding-right: 8px;
-      background-color: $whiteColor;
-      box-shadow: $main-cardShadow;
-      border-radius: 4px;
+  }
+  .modal {
+    position: fixed;
+    display: flex;
+    z-index: 2;
+    left: 15px;
+    top: 93px;
+    background-color: $backdropColor;
+    width: 100vw;
+    height: 100vw;
+    transform: translate(0, 0);
+    visibility: visible;
+    transition: visibility $modal-windowAnimation,
+      opacity $modal-windowAnimation;
+    &-box {
+      display: flex;
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform $modal-windowAnimation;
+      &--size_l {
+        width: calc (100% - 30px);
+        height: calc(100% - 180px);
+        padding-top: 8px;
+        padding-right: 8px;
+        background-color: $whiteColor;
+        box-shadow: $main-cardShadow;
+        border-radius: 4px;
+      }
     }
   }
-}
-.is-hidden .modal-box {
-  transform: translate(0%, 0%);
-  transition: transform $modal-windowAnimation;
+  .is-hidden .modal-box {
+    transform: translate(0%, 0%);
+    transition: transform $modal-windowAnimation;
+  }
 }
 
 @media screen and (min-width: 1200px) {

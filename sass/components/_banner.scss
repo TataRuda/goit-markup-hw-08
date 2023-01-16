@@ -26,7 +26,7 @@
     (min-resolution: 2dppx) {
     .banner {
       background-image: linear-gradient($bg-bannerColor, $bg-bannerColor),
-        url(../images/imgbackground-480@2x.jpg);
+        url(../images/imgbackground-480.jpg);
     }
   }
 }
@@ -57,7 +57,7 @@
     (min-resolution: 2dppx) {
     .banner {
       background-image: linear-gradient($bg-bannerColor, $bg-bannerColor),
-        url(../images/imgbackground-768@2x.jpg);
+        url(../images/imgbackground-768.jpg);
     }
   }
 }

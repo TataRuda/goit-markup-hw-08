@@ -1,8 +1,4 @@
 @media screen and (min-width: 480px) {
-  .catalog {
-    display: none;
-    width: 0;
-  }
   .unvisible-block {
     display: none;
     width: 0;
@@ -16,15 +12,13 @@
   }
   .catalog {
     width: 100%;
-    list-style: none;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     padding: 50px 0px 0px 0px;
     justify-content: space-between;
     align-items: center;
-    margin-top: 0px;
-    margin-bottom: 0px;
+
     &__title {
       font-weight: 700;
       font-size: $mobile-titleFont;
@@ -33,7 +27,6 @@
       letter-spacing: 0.03em;
       color: $text-darkColor;
       margin: 0px auto;
-      padding: 0;
     }
     &__item {
       position: relative;

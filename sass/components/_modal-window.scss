@@ -18,7 +18,7 @@
     transition: visibility $modal-windowAnimation,
       opacity $modal-windowAnimation;
     &-box {
-      display: flex;
+      display: block;
       position: absolute;
       z-index: 2;
       left: 15px;
@@ -39,22 +39,13 @@
     transition: transform $modal-windowAnimation;
   }
 }
-
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .is-hidden {
-    pointer-events: none;
-    visibility: hidden;
-    opacity: 0;
     transform: translate(0, 0);
     transition: transform $modal-windowAnimation;
   }
   .modal {
-    position: fixed;
     display: block;
-    z-index: 2;
-    left: 0;
-    top: 0;
-    background-color: $backdropColor;
     width: 100%;
     height: 100%;
     transform: translate(0, 0);
@@ -63,25 +54,28 @@
       opacity $modal-windowAnimation;
     &-box {
       display: block;
-      position: absolute;
-      z-index: 2;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
       transition: transform $modal-windowAnimation;
       &--size_l {
-        width: 528px;
-        height: 581px;
-        padding-top: 8px;
-        padding-right: 8px;
-        background: $whiteColor;
-        box-shadow: $main-cardShadow;
-        border-radius: 4px;
+        height: 609px;
       }
     }
   }
   .is-hidden .modal-box {
     transform: translate(0%, 0%);
     transition: transform $modal-windowAnimation;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    &-box {
+      &--size_l {
+        width: 528px;
+        height: 581px;
+      }
+    }
   }
 }

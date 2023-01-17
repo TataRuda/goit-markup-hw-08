@@ -7,7 +7,6 @@
     background-size: 480px 400px;
     min-height: 400px;
     display: block;
-    margin: 0;
     padding: 118px 0px 118px 0px;
     &__title {
       font-weight: 900;
@@ -36,7 +35,6 @@
       url(../images/imgbackground-768.jpg);
     background-size: 768px 400px;
     margin: 0 auto;
-    padding: 200px 0px 200px 0px;
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -51,9 +49,7 @@
   .banner {
     background-image: linear-gradient($bg-bannerColor, $bg-bannerColor),
       url(../images/imgbackground-1600.jpg);
-
     background-size: 1600px auto;
-
     padding: 200px 0px 200px 0px;
     &__title {
       font-size: $bannerFont;

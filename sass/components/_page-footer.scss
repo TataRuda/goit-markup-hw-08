@@ -11,9 +11,9 @@
       display: block;
       text-align: center;
       &--indent_left {
-        margin-top: 20px;
+        margin-top: 60px;
+        margin-bottom: 60px;
       }
-
       & h5 {
         font-weight: 700;
         font-size: $primaryFont;
@@ -23,17 +23,12 @@
         color: $whiteColor;
         margin-bottom: 20px;
       }
-      &--end {
-        margin-top: 60px;
-      }
     }
   }
   .contacts-footer {
     display: block;
     list-style: none;
     &--indent-top {
-      padding-left: 0px;
-      margin: 0px;
       padding-top: 20px;
     }
     &__address {
@@ -68,7 +63,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
     &__title {
       font-weight: 700;
       font-size: $primaryFont;
@@ -108,109 +102,52 @@
 /* tablet*/
 @media screen and (min-width: 768px) {
   .footer-row {
-    display: inline;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
     &__column {
-      display: block;
-      text-align: center;
       &--indent_left {
-        width: 206px;
-        margin-top: 0px;
-        margin-left: 144px;
+        padding-left: 144px;
+        margin-top: 5px;
       }
       &--end {
-        display: block;
         margin-top: 60px;
       }
     }
   }
-  .newsletter-form {
-    display: flex;
-    flex-direction: column;
-
-    &__title {
-      font-weight: 700;
-      font-size: $primaryFont;
-      line-height: 1.14;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      color: $whiteColor;
-      text-align: center;
-    }
-    &__input {
-      display: inline;
-      padding: 14px 15px;
-      border-radius: 4px;
-      border: 1px solid $borderColor;
-      background-color: $bgdarkColor;
-      margin-top: 20px;
-      margin-bottom: 20px;
-
-      text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer-row {
+    justify-content: flex-start;
+    &__column {
+      text-align: left;
+      &--indent_left {
+        padding-left: 70px;
+        padding-right: 77px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+      }
+      &--end {
+        margin-top: 10px;
+      }
     }
   }
-
-  @media screen and (min-width: 1200px) {
-    .footer-row {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: flex-start;
-      &__column {
-        display: block;
-        text-align: left;
-        &--indent_left {
-          margin-left: 70px;
-          margin-top: 0px;
-          margin-left: 78px;
-        }
-
-        & h5 {
-          font-weight: 700;
-          font-size: $primaryFont;
-          line-height: 1.14;
-          letter-spacing: 0.03em;
-          text-transform: uppercase;
-          color: $whiteColor;
-          margin-top: 11px;
-          margin-bottom: 20px;
-        }
-        &--end {
-          padding-top: 11px;
-          margin-top: 0;
-        }
-      }
+  .newsletter-form {
+    justify-content: flex-start;
+    position: relative;
+    align-items: flex-end;
+    flex-direction: row;
+    &__input {
+      width: 358px;
+      margin-right: 12px;
+      margin-bottom: 0;
+      margin-top: 36px;
     }
-
-    .contacts-footer {
-      list-style: none;
-      &--indent-top {
-        padding-left: 0px;
-        margin: 0px;
-        padding-top: 20px;
-      }
-      &__address {
-        font-style: normal;
-        font-size: $primaryFont;
-        line-height: 1.71;
-        letter-spacing: 0.03em;
-        color: $whiteColor;
-      }
-      &__item:not(:last-child) {
-        padding-bottom: 9px;
-      }
-    }
-
-    .newsletter-form {
-      flex-direction: row;
-      align-items: flex-end;
-      &__title {
-        text-align: left;
-      }
-      &__input {
-        margin-top: 20px;
-        margin-bottom: 0px;
-        text-align: left;
-      }
+    &__title {
+      position: absolute;
+      left: 0;
+      top: 0;
     }
   }
 }

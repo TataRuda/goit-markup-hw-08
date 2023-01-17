@@ -6,8 +6,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
-    padding: 0;
   }
   .menu-toggle {
     border: none;
@@ -20,40 +18,36 @@
     }
   }
   .header-container__navigation,
+  .header-container__navigation-portfolio,
   .contacts {
     display: none;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .header-border {
-    border-bottom: 1px solid $header-brColor;
-  }
+@media screen and (min-width: 768px) {
   .header-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 24px 0px 25px 0px;
+    padding: 21px 0px 21px 0px;
     &__navigation {
-      margin: 0px 345px 0px 93px;
+      margin: 0px 101px 0px 83px;
     }
     &__navigation-portfolio {
-      margin: 0px 350px 0px 93px;
+      margin: 0px 101px 0px 83px;
     }
   }
   .menu-toggle {
     display: none;
     width: 0;
   }
-  .header-container__navigation {
+  .header-container__navigation,
+  .header-container__navigation-portfolio {
     display: block;
   }
   .menu-nav {
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
     display: flex;
-    gap: 46px;
+    gap: 60px;
     &__link {
       font-weight: 500;
       font-size: $primaryFont;
@@ -81,7 +75,7 @@
           border-radius: 2px;
           position: absolute;
           left: 0;
-          top: 46px;
+          top: 45px;
           right: 0;
           bottom: 0;
         }
@@ -89,22 +83,20 @@
     }
   }
   .contacts {
-    list-style: none;
     display: flex;
-    gap: 30px;
-    align-items: center;
-    vertical-align: middle;
-    &--end {
-      padding: 0px;
-      margin: 0px;
-    }
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+
     &__link {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       color: $secondaryColor;
       font-weight: 500;
-      font-size: $primaryFont;
+      font-size: $form-textFont;
       line-height: 1.14;
       letter-spacing: 0.02em;
-      text-decoration: none;
       outline: none;
       transition: color $baseAnimation;
       &:hover,
@@ -114,8 +106,58 @@
     }
     &__icon {
       fill: currentColor;
-      vertical-align: middle;
-      &--position-left {
+      &--smartphone {
+        width: 10px;
+        height: 14px;
+        margin-right: 8px;
+      }
+      &--envelope {
+        width: 14px;
+        height: 10px;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-container {
+    padding: 24px 0px 25px 0px;
+    &__navigation {
+      margin: 0px 345px 0px 93px;
+    }
+    &__navigation-portfolio {
+      margin: 0px 350px 0px 93px;
+    }
+  }
+  .menu-nav {
+    display: flex;
+    gap: 46px;
+    &__link--is-active {
+      position: relative;
+      &::after {
+        content: "";
+        top: 46px;
+      }
+    }
+  }
+  .contacts {
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+
+    &__link {
+      font-size: $primaryFont;
+    }
+    &__icon {
+      fill: currentColor;
+      &--smartphone {
+        width: 10px;
+        height: 16px;
+        margin-right: 10px;
+      }
+      &--envelope {
+        width: 16px;
+        height: 12px;
         margin-right: 10px;
       }
     }

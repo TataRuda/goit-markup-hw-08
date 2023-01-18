@@ -19,14 +19,8 @@
     &:focus {
       fill: $primaryColor;
     }
-    &__icon {
-      fill: currentColor;
-      &:hover,
-      &:focus {
-        fill: currentColor;
-      }
-    }
   }
+
   .header-container__navigation,
   .header-container__navigation-portfolio,
   .contacts {

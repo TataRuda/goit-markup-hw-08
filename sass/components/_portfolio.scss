@@ -79,6 +79,9 @@
     &__figcaption--long-first {
       padding: 20px 24px 56px 24px;
       line-height: 1;
+      & p {
+        padding-top: 1px;
+      }
     }
     &__figcaption--long p {
       padding-top: 1px;

@@ -6,15 +6,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 16px 0px 16px 0px;
   }
   .menu-toggle {
     border: none;
     fill: $blackColor;
     background-color: $whiteColor;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     &:hover,
     &:focus {
       fill: $primaryColor;
+    }
+    &__icon {
+      fill: currentColor;
+      &:hover,
+      &:focus {
+        fill: currentColor;
+      }
     }
   }
   .header-container__navigation,

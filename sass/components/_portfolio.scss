@@ -24,6 +24,7 @@
     }
     &__overlay {
       background-color: $primaryColor;
+      position: relative;
       opacity: 0.9;
       width: 100%;
       height: 0;
@@ -40,7 +41,10 @@
       letter-spacing: 0.03em;
       color: $whiteColor;
       position: absolute;
-      padding: 49px 45px 49px 24px;
+      padding-left: 24px;
+      padding-right: 24px;
+      top: 50%;
+      transform: translate(0, -50%);
     }
     &__figcaption {
       font-weight: 400;
@@ -72,6 +76,11 @@
     grid-template-rows: auto auto auto auto;
   }
   .card-portfolio {
+    position: relative;
+    & img {
+      width: 354px;
+      height: auto;
+    }
     &__figcaption--long {
       line-height: 1;
       width: 100%;
@@ -87,13 +96,11 @@
       padding-top: 1px;
       line-height: 1;
     }
-
     &__title--long {
       display: block;
       width: 306px;
     }
     &:hover .card-portfolio__overlay--long {
-      z-index: 1;
       height: 67%;
     }
     &__overlay--long {
